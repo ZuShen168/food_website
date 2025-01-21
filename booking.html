@@ -18,17 +18,25 @@
     <img src="logo.png">
   </header>
   <main>
-    <form>
+    <!-- method="post" is better for security-->
+    <form method="get">
       <div>
-        <label for="username">Username</label><br>
-        <input type="text" id="username" name="username" minlength="2" required>
+        <label for="user_email">Email</label><br>
+        <input type="email" id="user_email" name="user_email">
       </div>
       <div>
-        <label for="user_password">Password</label><br>
-        <input type="password" id="user_password" name="user_password" minlength="2" required>
+        <label for="booking_date">Booking Date</label><br>
+        <input type="date" id="booking_date" name="booking_date">
       </div>
-      <!-- It should validate before going to another page but for now it is not implemented -->
-      <button type="submit" onclick="location.href='booking.html'">Log In</button>
+      <div>
+        <label for="people_number">Number of People</label><br>
+        <input type="number" min="1" max="8" id="people_number" name="people_number">
+      </div>
+      <div>
+        <label for="policy_checkbox">I agree to the cancellation policy</label>
+        <input type="checkbox">
+      </div>
+      <button type="submit">Book Now</button>
     </form>
   </main>
 </body>
