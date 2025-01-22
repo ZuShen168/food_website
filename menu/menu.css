@@ -15,10 +15,11 @@
 }
 
 .menu-container {
-    max-width: 800px;
+    max-width: 1000px;
     display: flex;
     justify-content: center;
     background-color:#E0E0E2;
+    margin: auto;
 }
 
 
@@ -38,7 +39,7 @@
 
 .item-name {
 	margin: 25px;
-	font-size: 12px;
+	font-size: 16px;
 }
 
 b {
@@ -60,4 +61,8 @@ div > h3 {
 
 div ~ div {
   color: rgb(90, 90, 90);
+}
+
+div > h3 {
+    font-size: 30px;
 }
