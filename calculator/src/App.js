@@ -21,6 +21,7 @@ function App() {
 
   const handleClick3 = () => {
     calculation.length && setCalculation("");
+    answer.length && setAnswer("");
   };
 
   const handleClick4 = () => {
