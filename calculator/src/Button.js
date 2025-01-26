@@ -11,6 +11,11 @@ function Button(props){
         SetIsClicked(true);
     };
     const handleMouseRelease = () => {SetIsClicked(false);};
+    const handleKeyPress = (event) => {
+        event.key === props.element && props.handle(props.element);
+        event.key === props.element && SetIsClicked(true);
+    };
+    const handleKeyRelease = (event) => { event.key === props.element && SetIsClicked(false);};
 
     const divStyle = {
         width: "100px",
@@ -34,7 +39,7 @@ function Button(props){
 
     return (
         <div style={divStyle}>
-            <button style={butStyle} onMouseDown={handleMouseClick} onMouseUp={handleMouseRelease}>
+            <button style={butStyle} onMouseDown={handleMouseClick} onMouseUp={handleMouseRelease} onKeyDown={handleKeyPress} onKeyUp={handleKeyRelease}>
                 {props.element}
             </button>
         </div>

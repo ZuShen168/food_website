@@ -8,6 +8,7 @@ import Output from "./Output";
 import Row from "./Row";
 
 function App() {
+
   const [calculation, setCalculation] = useState("");
   const [answer, setAnswer] = useState("");
 
@@ -46,7 +47,7 @@ function App() {
       <Row handle={[handleClick, handleClick2, handleClick3, handleClick4, handleClick5]} row={["7","8","9","DEL","AC"]} handleIdx={[0,0,0,1,2]}/>
       <Row handle={[handleClick, handleClick2, handleClick3, handleClick4, handleClick5]} row={["4","5","6","*","/"]} handleIdx={[0,0,0,0,0]}/>
       <Row handle={[handleClick, handleClick2, handleClick3, handleClick4, handleClick5]} row={["1","2","3","+","-"]} handleIdx={[0,0,0,0,0]}/>
-      <Row handle={[handleClick, handleClick2, handleClick3, handleClick4, handleClick5]} row={["0",".","0","Ans","="]} handleIdx={[0,0,0,4,3]}/>
+      <Row handle={[handleClick, handleClick2, handleClick3, handleClick4, handleClick5]} row={["0",".","00","Ans","="]} handleIdx={[0,0,0,4,3]}/>
     </div>
   );
 }
